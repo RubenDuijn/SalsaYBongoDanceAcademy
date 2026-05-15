@@ -202,11 +202,11 @@ button {
   background:
     linear-gradient(180deg, rgba(255, 248, 238, 0.24), rgba(255, 248, 238, 0.01)) padding-box,
     linear-gradient(135deg, #fce4bc 0%, #d8ac70 44%, #c08450 100%);
-  color: #140d0b;
-  font-weight: 800;
-  font-size: 0.92rem;
-  letter-spacing: 0.02em;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.20);
+  color: #2a160c;
+  font-weight: 900;
+  font-size: 0.95rem;
+  letter-spacing: 0.03em;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.34);
   white-space: nowrap;
   box-shadow:
     0 14px 28px rgba(0, 0, 0, 0.28),
@@ -355,9 +355,19 @@ h3 {
 
 .hero-tagline {
   margin: 0.75rem 0 0;
-  color: var(--sand);
-  font-size: 1.16rem;
-  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid rgba(240, 218, 188, 0.28);
+  background: linear-gradient(135deg, rgba(240, 218, 188, 0.16), rgba(212, 164, 108, 0.14));
+  color: #f7e6c6;
+  font-size: 1.05rem;
+  font-weight: 850;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-shadow: 0 1px 12px rgba(240, 218, 188, 0.28);
 }
 
 .lead,
