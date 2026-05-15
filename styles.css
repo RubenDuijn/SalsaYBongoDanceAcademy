@@ -423,12 +423,32 @@ h3 {
   color: #d7c6b9;
 }
 
+.section-motto {
+  margin: 0 0 0.72rem;
+  width: fit-content;
+  font-size: 0.88rem;
+  font-weight: 850;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #f2d9af;
+  border-bottom: 2px solid rgba(224, 172, 96, 0.5);
+  padding-bottom: 0.22rem;
+}
+
 .hero-actions,
 .contact-links {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
   margin-top: 1.25rem;
+}
+
+.contact-links {
+  align-items: stretch;
+}
+
+.contact-links .button {
+  width: 100%;
 }
 
 .button {
@@ -1348,7 +1368,15 @@ h3 {
 }
 
 .footer-inner {
+  grid-template-columns: 1fr;
+  justify-items: center;
+  text-align: center;
+  gap: 0.8rem;
   align-items: center;
+}
+
+.footer-meta {
+  justify-self: center;
 }
 
 .site-footer p {
@@ -1405,9 +1433,10 @@ h3 {
   text-shadow: 0 0 16px rgba(224, 172, 96, 0.18);
 }
 
-.site-footer nav {
+.footer-nav {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 1rem;
 }
 
@@ -1436,6 +1465,12 @@ h3 {
     flex-wrap: wrap;
   }
 
+  .contact-links .button {
+    flex: 1 1 220px;
+    min-width: 220px;
+    justify-content: center;
+  }
+
   .styles-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1450,10 +1485,32 @@ h3 {
 
   .footer-inner {
     grid-template-columns: 1fr auto;
+    grid-template-areas:
+      "meta nav"
+      "cta cta"
+      "credit credit";
+    justify-items: stretch;
+    text-align: left;
+  }
+
+  .footer-meta {
+    grid-area: meta;
+    justify-self: start;
+  }
+
+  .footer-nav {
+    grid-area: nav;
+    justify-self: end;
+    justify-content: flex-end;
   }
 
   .footer-instagram-cta {
-    justify-self: end;
+    grid-area: cta;
+    justify-self: center;
+  }
+
+  .footer-credit {
+    grid-area: credit;
   }
 }
 
