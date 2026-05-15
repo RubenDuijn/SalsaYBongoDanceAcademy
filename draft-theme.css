@@ -1,0 +1,52 @@
+body.draft-variant {
+  background: linear-gradient(180deg, #1a0f0f 0%, #150a0a 50%, #0f0707 100%);
+}
+
+.draft-variant .site-shell::before {
+  display: none;
+}
+
+.draft-variant .hero {
+  background: linear-gradient(135deg, rgba(255, 200, 87, 0.08) 0%, rgba(255, 107, 74, 0.06) 100%);
+}
+
+.draft-variant .hero-panel,
+.draft-variant .stats-card,
+.draft-variant .style-card,
+.draft-variant .offer-card,
+.draft-variant .team-card,
+.draft-variant .contact-panel,
+.draft-variant .form-panel,
+.draft-variant .mobile-day-card,
+.draft-variant .desktop-schedule,
+.draft-variant .schedule-toolbar,
+.draft-variant .schedule-cell,
+.draft-variant .schedule-legend,
+.draft-variant .logo-showcase {
+  background: rgba(40, 22, 26, 0.5);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+.draft-variant .button {
+  background: linear-gradient(135deg, #ffc857, #ff7c54);
+  box-shadow: 0 10px 24px rgba(255, 200, 87, 0.22);
+}
+
+.draft-variant .button.secondary {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.draft-variant .logo-showcase-section {
+  display: none;
+}
+
+.draft-variant .reveal-up,
+.draft-variant .reveal-up.is-visible {
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+
+.draft-variant .variant-link {
+  color: #ffe6b0;
+}
