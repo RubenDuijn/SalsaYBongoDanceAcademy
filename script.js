@@ -87,9 +87,25 @@ function renderDayChips() {
   scheduleToolbar.innerHTML = scheduleData
     .map((item, index) => {
       const activeClass = index === selectedDay ? "day-chip is-active" : "day-chip";
-      return `<button class="${activeClass}" type="button" data-day-index="${index}" role="tab" aria-selected="${index === selectedDay}">${item.day}</button>`;
+      return `<button class="${activeClass}" type="button" data-day-index="${index}" role="tab" aria-selected="${index === selectedDay}" tabindex="${index === selectedDay ? "0" : "-1"}">${item.day}</button>`;
     })
     .join("");
+}
+
+function scrollSelectedDayChipIntoView() {
+  const selectedChip = scheduleToolbar?.querySelector('[data-day-index][aria-selected="true"]');
+
+  if (!selectedChip) {
+    return;
+  }
+
+  requestAnimationFrame(() => {
+    selectedChip.scrollIntoView({
+      behavior: "smooth",
+      block: "nearest",
+      inline: "center"
+    });
+  });
 }
 
 function renderMobileSchedule() {
@@ -176,6 +192,7 @@ if (menuToggle && siteNav) {
 
 if (scheduleToolbar && mobileSchedule && desktopSchedule) {
   renderDayChips();
+  scrollSelectedDayChipIntoView();
   renderMobileSchedule();
   renderDesktopSchedule();
 
@@ -187,6 +204,7 @@ if (scheduleToolbar && mobileSchedule && desktopSchedule) {
 
     selectedDay = Number(target.dataset.dayIndex);
     renderDayChips();
+    scrollSelectedDayChipIntoView();
     renderMobileSchedule();
   });
 }
