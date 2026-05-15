@@ -60,7 +60,17 @@ const form = document.getElementById("contact-form");
 const yearNode = document.getElementById("year");
 const revealNodes = document.querySelectorAll(".reveal-up");
 
-let selectedDay = 0;
+function getInitialSelectedDay() {
+  const currentWeekday = new Date().getDay();
+
+  if (currentWeekday >= 1 && currentWeekday <= 5) {
+    return currentWeekday - 1;
+  }
+
+  return 0;
+}
+
+let selectedDay = getInitialSelectedDay();
 
 function toggleMenu() {
   const expanded = menuToggle.getAttribute("aria-expanded") === "true";
