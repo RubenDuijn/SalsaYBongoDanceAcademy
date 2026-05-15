@@ -99,11 +99,14 @@ function scrollSelectedDayChipIntoView() {
     return;
   }
 
+  const targetLeft = selectedChip.offsetLeft - (scheduleToolbar.clientWidth - selectedChip.clientWidth) / 2;
+  const maxLeft = scheduleToolbar.scrollWidth - scheduleToolbar.clientWidth;
+  const clampedLeft = Math.max(0, Math.min(targetLeft, Math.max(0, maxLeft)));
+
   requestAnimationFrame(() => {
-    selectedChip.scrollIntoView({
-      behavior: "smooth",
-      block: "nearest",
-      inline: "center"
+    scheduleToolbar.scrollTo({
+      left: clampedLeft,
+      behavior: "smooth"
     });
   });
 }
