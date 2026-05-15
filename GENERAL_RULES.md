@@ -14,6 +14,10 @@
 
 **Recommended local setup:** keep this site as its own Git repository inside `salsaybongodanceacademy-website/` so pushes go to the Salsa y Bongó repo and not to the parent workspace repository.
 
-> **Note on using a personal GitHub for a client project:** For small freelance projects this is perfectly fine and very common. If the client ever wants to own the repo independently, the cleanest path is to transfer the repository to a GitHub Organisation (e.g. `github.com/SalsaYBongoDanceAcademy`) — GitHub makes this a one-click operation and all existing links/deploys keep working. Netlify can stay connected to whichever owner. For now, the personal repo is a pragmatic and standard choice.
+**Publishing target:** GitHub Pages from the `main` branch, using the repository root as the publish source.
 
-The site is deployed via Netlify, connected to the GitHub repo above.
+**Custom domain:** `www.salsaybongodanceacademy.com`
+
+> **Note on using a personal GitHub for a client project:** For small freelance projects this is perfectly fine and very common. If the client ever wants to own the repo independently, the cleanest path is to transfer the repository to a GitHub Organisation (for example `github.com/SalsaYBongoDanceAcademy`). GitHub supports repository transfers cleanly, and the custom domain can remain attached to the site. For now, the personal repo is a pragmatic and standard choice.
+
+The site is intended to be published via GitHub Pages and connected to GoDaddy through the custom domain above.
